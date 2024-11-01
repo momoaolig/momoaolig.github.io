@@ -29,6 +29,46 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+nav {
+	display: flex; 
+	flex-direction: column;
+	gap: 15px; 
+	align-items: flex-start; 
+}
+
+nav a {
+    position: relative; /* Required for the ::after pseudo-element to position relative to the link */
+    -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	font-size: 20px;
+    color: #49bf9d;
+    text-decoration: none; /* Remove default underline */
+	display: inline-flex; /* Keep the underline width strictly to the text */
+	align-items: center; /* Center alignment for consistency */
+	margin-right: 15px; /* Space between links */
+}
+
+nav a::after {
+	content: '';
+	display: block;
+	width: 100%; /* Full width of the text */
+	height: 2px;
+	background-color: #49bf9d;
+	position: absolute;
+	left: 0;
+	bottom: -2px; /* Position the line just below the text */
+	transform: scaleX(0); /* Start with no width */
+	transform-origin: center; /* Scale from the center */
+	transition: transform 0.2s ease; /* Smooth underline transition */
+}
+
+/* Hover effect to expand the underline from the center */
+nav a:hover::after {
+	transform: scaleX(1); /* Expands to the full width from the center */
+}
+
 body {
 	line-height: 1;
 }
@@ -106,20 +146,22 @@ input, select, textarea {
 	}
 
 	a {
+		position: relative; 
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: #49bf9d;
 		text-decoration: none;
 	}
 
-		a:hover {
+
+		/* a:hover {
 			border-bottom-color: transparent;
 			color: #49bf9d !important;
 			text-decoration: none;
-		}
+		} */
 
 	strong, b {
 		color: #787878;
@@ -2690,8 +2732,8 @@ input, select, textarea {
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			margin: 2em 0 0 0;
+			padding: 2em 0 0 0;
 		}
 
 			#main > section:first-child {
