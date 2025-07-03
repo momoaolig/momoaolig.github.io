@@ -1,481 +1,91 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>MaxZhou|MSCS|CUBoulder</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mo (Max) Zhou</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="header-title">Mo (Max) Zhou</div>
+      <nav class="header-nav">
+        <a href="assets/resume.pdf" target="_blank" data-en="Resume" data-zh="简历">Resume</a>
+        <a href="https://www.youtube.com/watch?v=ZhJBBRxt-2Y&themeRefresh=1" target="_blank" data-en="Talk" data-zh="演讲">Talk</a>
+        <div class="lang-toggle-container">
+          <span class="lang-label" data-en="EN" data-zh="EN">EN</span>
+          <div class="lang-toggle" onclick="toggleLanguage()">
+            <div class="lang-slider"></div>
+          </div>
+          <span class="lang-label" data-en="中文" data-zh="中文">中文</span>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-		<!-- Header -->
-		 <section id="header">
-			<header>
-				<div class="inner">
-					<div class="image avatar">
-						<img src="images/avatar.HEIC" alt="Mo Zhou profile picture" />
-					</div>
-					<h1>
-						<p style="line-height: 2; font-size: 15px; word-break: break-word; overflow-wrap: break-word; word-wrap: break-word;">
-						<span style="font-size: 30px; font-weight: bold; color: #ffffff">Mo Zhou</span><br />
-						Master Student in Computer Science<br />
-						University of Colorado Boulder<br />
-						Email: Mo.Zhou@colorado.edu<br />
-					</p>	
-					</h1>
-				</div>
-			</header>
-			<nav id="nav">
-				<a href="CV.pdf">CV</a>
-				<a href="#about">About</a>
-				<a href="#education">Education</a>
-				<a href="#research">Research</a>
-				<a href="#talk">Talks</a>
+  <main class="container">
+    <div class="profile-block profile-horizontal">
+      <img src="assets/img/profile2.jpeg" alt="Mo (Max) Zhou" class="avatar-rect" />
+      <div class="profile-info">
+        <h1 data-en="Mo (Max) Zhou" data-zh="周莫">Mo (Max) Zhou</h1>
+        <p class="subtitle" data-en="CS Master Student @ CU Boulder" data-zh="科罗拉多大学博尔德分校计算机科学理学硕士">CS Master Student @ CU Boulder</p>
+        <nav class="social-links">
+          <a href="https://scholar.google.com/citations?user=BQfgt_4AAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="https://github.com/momoaolig?tab=overview&from=2025-07-01&to=2025-07-03" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/max-mz/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:momoaolig@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </nav>
+      </div>
+    </div>
+    <section id="about">
+      <h2 data-en="About Me" data-zh="个人简介">About Me</h2>
+      <p data-en="I finished my master degree in the Department of Computer Science, at the University of Colorado Boulder, advised by <a href='https://dannagurari.colorado.edu' target='_blank'>Danna Gurari</a>." 
+        data-zh="我于美国科罗拉多大学博尔德分校计算机科学专业完成了硕士学位的学习，导师为<a href='https://dannagurari.colorado.edu' target='_blank'>Danna Gurari</a>。">
+        I finished my master degree in the Department of Computer Science, at the University of Colorado Boulder, advised by 
+        <a href="https://dannagurari.colorado.edu" target="_blank">Danna Gurari</a>.</p>
+      <p data-en="Previously, I studied at the Nanjing University of Posts and Telecommunications, majoring in Information Security, advised by Lifa Wu." 
+      data-zh="在此之前，我的本科就读于南京邮电大学信息安全专业，导师为吴礼发教授。">
+      Previously, I studied at the Nanjing University of Posts and Telecommunications, majoring in Information Security, advised by Lifa Wu. </p>
+      <p data-en="<strong>I am open to full-time job now. If you're interested in my works or just want to chat, feel free to drop me an email! 🌟</strong>" 
+        data-zh="<strong>我正在申请全职工作。如果您对我的工作感兴趣或想深入探讨，请随时给我发邮件！🌟</strong>">
+        <strong>I am open to full-time job now. If you're interested in my works or just want to chat, feel free to drop me an email! 🌟</strong></p>
+      <p data-en="My research interests mainly lie in computer vision, especially in:" data-zh="我的研究集中于计算机视觉领域，具体为：">
+        My research interests mainly lie in computer vision, especially in:</p>
+      <ul>
+        <li data-en="<strong>Image Generation</strong>: Improving the controllability and fidelity of image generation with multimodal information." 
+          data-zh="<strong>图像生成</strong>：融入多模态信息提高图像生成控制度和真实度。">
+          <strong>Image Generation</strong>: Improving the controllability and fidelity of image generation with multimodal information.</li>
+        <li data-en="<strong>Multimodal Learning</strong>: Aligning vision and language into cohesive multimodal representations." 
+          data-zh="<strong>多模态学习</strong>：将视觉和语言对齐为统一的多模态表示。">
+          <strong>Multimodal Learning</strong>: Aligning vision and language into cohesive multimodal representations.</li>
+      </ul>
+    </section>
+    <section id="Publications">
+      <h2 data-en="Publications" data-zh="发表论文">Publications</h2>
+      <ul class="project-list">
+        <li class="publication-item">
+          <img src="assets/img/partstickers.pdf" alt="PartStickers" class="pub-thumb" />
+          <div class="pub-details">
+            <p><strong>PartStickers: Generating Parts of Objects for Rapid Prototyping</strong></p>
+            <p><strong>Mo Zhou</strong>, Josh Myers-Dean, Danna Gurari<br/>
+            <em>CVPR CVEU workshop 2025</em><br/>
+            <a href="https://arxiv.org/abs/2504.05508">[Paper]</a> <a href="https://github.com/momoaolig/partstickers">[Code]</a></p>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-			</nav>
-		</section>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="about">
-						<header class="major">
-							<h2>Hello!</h2>
-						</header>
-						<p> I'm currently a second-year master student in the Department of Computer Science, at the University of Colorado Boulder.
-							I'm working in the Image and Video Computing Group with <a href="https://dannagurari.colorado.edu"> Danna Gurari</a>.
-							My research focuses on multimodality and image generation.
-							My current goal is to keep pursuing a PhD degree.
-						</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</section>
-
-					<section id="education">
-						<header class="major">
-							<h2>Education</h2>
-						</header>
-						<p> 
-							<ul>
-								<li>MS Computer Science at University of Colorado Boulder(2023~present)</li>
-								<li>BE Information Security at Nanjing University of Posts and Telecommunications(2018~2022)</li>
-							</ul>
-						</p>
-
-					</section>
-
-					<section id="research">
-						<header class="major">
-							<h2>Research Interest</h2>
-						</header>
-						<p> My research interests lie in computer vision, with a particular focus on multimodal learning and image generation. Currently, 
-							I'm working on enhancing generative models to incorporate part-level information, enabling the generation of high-fidelity images that accurately reflect fine-grained prompts.
-					</section>
-
-					<section id="talk">
-						<header class="major">
-							<h2>Talks</h2>
-						</header>
-						<p> 
-							<ul>
-								CSCI 7000 Recent Advances in Computer Vision Student-led Lecture with Richard Terrile:  
-								<a href="https://www.youtube.com/watch?v=ZhJBBRxt-2Y">Object Part Segmentation</a>
-							</ul>
-						</p>
-
-					</section>
-
-				<!-- Two -->
-					<!-- <section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section> -->
-
-
-				<!-- Four -->
-				
-					<!-- <section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				
-
-			</div> -->
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<li><a href="https://github.com/momoaolig" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-						<li><a href="https://www.linkedin.com/in/max-mz/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="mailto:Mo.Zhou@colorado.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Mo Zhou, 2024</li><li>Design by <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p data-en="Last updated: 07/02/2025" data-zh="最后更新：2025年7月2日">Last updated: 07/02/2025</p>
+      <p class="template-credit" data-en="Template from <a href='https://avaxiao.github.io' target='_blank'>Yao Xiao</a>" 
+        data-zh="模板借鉴<a href='https://avaxiao.github.io' target='_blank'>Yao Xiao</a>">
+        Template from <a href="https://avaxiao.github.io" target="_blank">Yao Xiao</a></p>
+    </div>
+  </footer>
+  <script src="assets/js/language-switcher.js"></script>
+</body>
 </html>
