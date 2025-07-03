@@ -71,4 +71,14 @@ function initializeLanguage() {
 }
 
 // Initialize when the page loads
-document.addEventListener('DOMContentLoaded', initializeLanguage); 
+document.addEventListener('DOMContentLoaded', initializeLanguage);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var menuBtn = document.getElementById('mobile-menu-toggle');
+  var nav = document.querySelector('.header-nav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+  }
+}); 

@@ -20,21 +20,28 @@ body {
 .header-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 900px;
   margin: 0 auto;
   padding: 0.3rem 1rem;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 .header-title {
+  margin-left: 0.5rem;
   font-size: 1.6rem;
   font-weight: 400;
   color: #222;
   letter-spacing: 0.5px;
 }
+.mobile-menu-btn {
+  margin-left: 0;
+}
 .header-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: 0;
 }
 .header-nav a {
   margin-left: 1.5rem;
@@ -172,11 +179,68 @@ main.container {
     font-size: 1.1rem;
     padding-left: 0.4rem;
   }
+  .header-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 0.5rem;
+  }
+  .header-nav {
+    flex-direction: column;
+    width: 100vw;
+    background: #fff;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    z-index: 2000;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+    padding: 0;
+    border-bottom: none;
+  }
+  .header-nav.open {
+    max-height: 500px;
+    pointer-events: auto;
+  }
+  .header-nav a {
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: none;
+  }
+  .header-nav a:last-child {
+    border-bottom: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+  .header-title {
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+  .lang-toggle-container {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    gap: 0.4rem;
+    z-index: 1100;
+  }
 }
 @media (max-width: 800px) {
   .profile-horizontal {
     flex-direction: column;
     gap: 1.5rem;
+    margin-left: 0;
+    align-items: center;
+    width: 100%;
   }
   .avatar-rect {
     width: 180px;
@@ -186,6 +250,8 @@ main.container {
   }
   .profile-info {
     align-items: center;
+    margin-left: 0;
+    width: 100%;
   }
 }
 @media (max-width: 700px) {
@@ -278,9 +344,15 @@ main.container {
 
 .lang-toggle-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-left: 1.5rem;
   gap: 0.4rem;
+  margin-left: 1.5rem;
+  position: static;
+  right: auto;
+  top: auto;
+  transform: none;
+  z-index: auto;
 }
 
 .lang-label {
@@ -333,4 +405,73 @@ main.container {
 
 .lang-toggle.active:hover {
   background: #005f99;
+}
+
+/* --- Improved mobile responsiveness --- */
+
+@media (max-width: 600px) {
+  .publication-item {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 0;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .pub-thumb {
+    max-width: 100%;
+    max-height: 120px;
+    margin: 0 0 0.5rem 0;
+  }
+  .pub-details {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Make images responsive */
+.avatar-rect, .pub-thumb {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/* Hamburger menu styles */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  .header-nav {
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+    padding: 0 0.5rem;
+  }
+  .header-nav.open {
+    max-height: 300px;
+    pointer-events: auto;
+  }
+  .header-flex {
+    position: relative;
+  }
 }

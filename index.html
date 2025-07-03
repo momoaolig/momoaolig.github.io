@@ -10,18 +10,21 @@
 <body>
   <header class="site-header">
     <div class="container header-flex">
+      <button id="mobile-menu-toggle" aria-label="Open menu" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
       <div class="header-title">Mo (Max) Zhou</div>
       <nav class="header-nav">
         <a href="assets/resume.pdf" target="_blank" data-en="Resume" data-zh="简历">Resume</a>
         <a href="https://www.youtube.com/watch?v=ZhJBBRxt-2Y&themeRefresh=1" target="_blank" data-en="Talk" data-zh="演讲">Talk</a>
-        <div class="lang-toggle-container">
-          <span class="lang-label" data-en="EN" data-zh="EN">EN</span>
-          <div class="lang-toggle" onclick="toggleLanguage()">
-            <div class="lang-slider"></div>
-          </div>
-          <span class="lang-label" data-en="中文" data-zh="中文">中文</span>
-        </div>
       </nav>
+      <div class="lang-toggle-container">
+        <span class="lang-label" data-en="EN" data-zh="EN">EN</span>
+        <div class="lang-toggle" onclick="toggleLanguage()">
+          <div class="lang-slider"></div>
+        </div>
+        <span class="lang-label" data-en="中文" data-zh="中文">中文</span>
+      </div>
     </div>
   </header>
 
