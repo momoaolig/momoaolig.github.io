@@ -35,6 +35,18 @@ function updateLanguage() {
                 element.textContent = enContent;
             }
         }
+        
+        // Update href attributes if they exist
+        const enHref = element.getAttribute('data-en-href');
+        const zhHref = element.getAttribute('data-zh-href');
+        
+        if (enHref && zhHref) {
+            if (currentLanguage === 'zh') {
+                element.href = zhHref;
+            } else {
+                element.href = enHref;
+            }
+        }
     });
 }
 
